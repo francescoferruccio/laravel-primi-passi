@@ -22,7 +22,7 @@ header ul li a {
 }
 
 header ul li a:hover {
-  color: blue;
+  color: white;
   text-decoration: underline;
 }
 
@@ -38,6 +38,10 @@ header ul li a:hover {
   list-style-type: none;
 }
 
+.navbar ul li:hover {
+  color: white;
+}
+
 main {
   width: 100%;
   min-height: calc(100vh - 160px);
@@ -46,11 +50,30 @@ main {
 
 main .content {
   display: flex;
+  flex-direction: column;
+  align-items: center;
   width: calc(100% - 200px);
 }
 
 main .content h1 {
   margin: auto;
+}
+
+main .content .boxes {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+main .content .boxes .box {
+  width: 50px;
+  height: 50px;
+  margin: 5px;
+  background-color: black;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 footer {
