@@ -5,17 +5,20 @@ use Illuminate\Support\Facades\Route;
 Route::get('/home', function () {
 
     $numBox = 1;
-    if ($numBox == 1) {
-      $messaggio = 'Guarda che bello questo quadratino!';
-    } else if ($numBox > 1){
-      $messaggio = 'Guarda che belli questi ' . $numBox . ' quadratini!';
+
+    if ($numBox > 0) {
+      if ($numBox == 1) {
+        $messaggio = 'Guarda che bello questo quadratino!';
+      } else if ($numBox > 1){
+        $messaggio = 'Guarda che belli questi ' . $numBox . ' quadratini!';
+      }
+
+      return view('home', compact('numBox', 'messaggio'));
     } else {
-      $messaggio = '';
+      return view('home');
     }
 
-    return view('home', compact('numBox', 'messaggio'));
 
-    // return view('home');
 });
 
 Route::get('/about', function() {
