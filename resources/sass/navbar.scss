@@ -6,7 +6,9 @@
   ul {
 
     li {
-      margin: 5px 0;
+      margin: 5px;
+      cursor: pointer;
+      list-style-type: none;
     }
   }
 }
