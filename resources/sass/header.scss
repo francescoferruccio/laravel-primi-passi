@@ -1,0 +1,17 @@
+header {
+  height: 80px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  background-color: #ccc;
+  
+  ul {
+    display: flex;
+
+    li {
+      margin-right: 10px;
+      list-style-type: none;
+      cursor: pointer;
+    }
+  }
+}
